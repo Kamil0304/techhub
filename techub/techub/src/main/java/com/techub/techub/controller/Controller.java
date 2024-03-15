@@ -5,6 +5,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class Controller {
+    /***
+     *  returns welcome
+     * @return
+     */
     @GetMapping("/welcome")
     public String sayWelcome(){
         StringBuilder sb = new StringBuilder();
