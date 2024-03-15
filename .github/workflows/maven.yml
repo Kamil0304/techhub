@@ -8,12 +8,11 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - name: checkout code
-    - uses: actions/checkout@v2
+    - name: Checkout code
+      uses: actions/checkout@v2
       with:
         path: techhub  # Specify the directory where you want to checkout the code
 
@@ -23,8 +22,10 @@ jobs:
         java-version: '17'
         distribution: 'adopt'
         cache: maven
+
     - name: Navigate to project directory
-      run: cd techhub
+      run: cd techhub  # Navigate to the directory where your Maven project is located
+
     - name: Build with Maven
       run: mvn clean install
 
