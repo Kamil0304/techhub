@@ -19,6 +19,8 @@ jobs:
         java-version: '17'
         distribution: 'adopt'
         cache: maven
+    - name: Navigate to project directory
+      run: cd .
     - name: Build with Maven
       run: mvn clean install
 
